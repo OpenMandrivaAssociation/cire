@@ -14,7 +14,6 @@ Source1:	%{name}-48.png
 URL:		http://cire.sf.net/
 # Not sure where it actually fits
 Group:		Office
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	GPL
 BuildRequires: ImageMagick
 
