@@ -42,15 +42,17 @@ You can use:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="%{_bindir}/%{name}" \
-                icon="%{name}.png" \
-                needs="x11" \
-                section="Office/Accessories" \
-                title="Cire" \
-                longtitle="A open-source diary program"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_bindir}/%{name}                
+Icon=%{name}                                
+Categories=Office;                
+Name=Cire                
+Comment=A open-source diary program
 EOF
+
 mkdir -p %{buildroot}/%{_iconsdir}/ %{buildroot}/%{_miconsdir}/
 install -m644 %{SOURCE1} -D %{buildroot}/%{_liconsdir}/%{name}.png
 convert %{buildroot}/%{_liconsdir}/%{name}.png -resize 32x32 %{buildroot}/%{_iconsdir}/%{name}.png
@@ -70,6 +72,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc README TODO HACKING CREDITS CHANGES
 %{_bindir}/%{name}
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 %{_iconsdir}/*
 
