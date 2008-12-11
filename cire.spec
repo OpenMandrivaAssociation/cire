@@ -16,7 +16,7 @@ URL:		http://cire.sf.net/
 Group:		Office
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	GPL
-BuildRequires: ImageMagick
+BuildRequires: imagemagick
 
 %description
 Cire is a Free and Open-Source Program for keeping an Electronic
