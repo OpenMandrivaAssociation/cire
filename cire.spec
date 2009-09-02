@@ -1,6 +1,6 @@
 %define	name	cire
 %define	version 0.14.0
-%define rel	3
+%define rel	4
 %define	release	%mkrel %rel
 
 Name:		%{name} 
