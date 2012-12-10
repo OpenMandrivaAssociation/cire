@@ -80,3 +80,39 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/mandriva-%{name}.desktop
 %{_iconsdir}/*
 
+
+
+%changelog
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 0.14.0-5mdv2011.0
++ Revision: 617038
+- the mass rebuild of 2010.0 packages
+
+* Wed Sep 02 2009 Thierry Vignaud <tv@mandriva.org> 0.14.0-4mdv2010.0
++ Revision: 424868
+- rebuild
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - lowercase ImageMagick
+
+* Thu Jun 12 2008 Pixel <pixel@mandriva.com> 0.14.0-3mdv2009.0
++ Revision: 218435
+- rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Tue Dec 18 2007 Thierry Vignaud <tv@mandriva.org> 0.14.0-3mdv2008.1
++ Revision: 132935
+- auto-convert XDG menu entry
+- kill re-definition of %%buildroot on Pixel's request
+- import cire
+
+
+* Fri Oct 21 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.14.0-3mdk
+- Fix BuildRequires
+
+* Sun Sep 04 2005 Michael Scherer <misc@mandriva.org> 0.14.0-2mdk
+- Rebuild to avoid libglitz deps
+
+* Wed Aug 17 2005 Eskild Hustvedt <eskild@mandrake.org> 0.14.0-1mdk
+- Initial Mandriva Linux package
