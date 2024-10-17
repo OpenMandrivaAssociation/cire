@@ -11,7 +11,7 @@ Source0:	%{name}-%{version}.tar.bz2
 # Courtesy of the open clipart library
 # http://openclipart.org/clipart/unsorted/glossy_paper__gino_river_01.svg
 Source1:	%{name}-48.png
-URL:		http://cire.sf.net/
+URL:		https://cire.sf.net/
 # Not sure where it actually fits
 Group:		Office
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
